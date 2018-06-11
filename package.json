@@ -4,11 +4,17 @@
   "description": "practice tests with mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*test.js"
+    "test": "mocha **/*test.js",
+    "autotest": "nodemon --exec \"npm test\""
   },
   "author": "Stewart Boy",
   "license": "ISC",
   "devDependencies": {
+    "expect": "^23.1.0",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.10"
   }
 }
