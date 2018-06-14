@@ -10,6 +10,12 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/users", (req, res) => {
+    res.send([{name: "Stewart", age: 29},
+                {name: "Lydia Chalek", age: 27},
+            {name: "Mike", age: 29}])
+})
+
 app.listen(3000);
 
 module.exports.app = app;

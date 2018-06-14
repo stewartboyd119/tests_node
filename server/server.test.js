@@ -16,3 +16,13 @@ it('should return hello world', (done) => {
     })
     .end(done);
 })
+
+it("should return a list of users", (done) => {
+    request(app)
+    .get("/users")
+    .expect(200)
+    .expect((res) => {
+        expect(res.body).toContainEqual({name: "Stewart", age: 29});
+    })
+    .end(done);
+})
